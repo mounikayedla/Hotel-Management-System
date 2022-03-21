@@ -1,0 +1,17 @@
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image:  url("/assets/guest.jpg") ;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+    .center{
+      text-align: center;
+      color: bisque;
+    }
+    .btn{
+      align-items: center;
+      padding-right: 10px;
+    }
