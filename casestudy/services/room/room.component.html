@@ -1,0 +1,115 @@
+<!--  -->
+ <section class="header">
+     
+
+        <!-- <a href="" routerLink="/home"> 
+        <a href="" routerLink="/dashboard"> -->
+
+
+            <img src="/assets/hotellogo.webp" height="150px" width="150px" style="border-radius: 50%;"
+                alt="..."> 
+
+    <!--   </a> -->
+ 
+       <div class="nav-links" id="navLinks">
+
+        <div class="d-flex">
+            <ul>
+                <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                
+            </ul>
+        </div>
+    </div>
+        
+    
+    <section class="center">
+
+        <!-- <a class="hero-btn" routerLink='/reservation'>
+            <button class="btn btn-success" type="button">
+                <h2>BookRoom</h2>
+            </button>
+        </a> -->
+
+        <h2>[.....All Room Details.....]</h2>
+
+    </section>  
+
+    <!-- table -->
+
+
+    <table class="table table-hover table-dark table-bordered" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Room Id</th>
+                <th>Room Charges</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Availability</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let room of rooms">
+                <td>{{room.roomId}}</td>
+                <td>{{room.roomCharges}}</td>
+                <td>{{room.roomType}}</td>
+                <td>{{room.roomDesc}}</td>
+                <!-- <td>{{room.roomAvl}}</td> -->
+                <td> <input type="checkbox" [checked]="room.roomAvl" disabled style="margin-left:50px;"></td>
+                <td>
+                    <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                    (click)="onEditDep(room)">EDIT</button>
+                    <button class="btn btn-danger" type="button" type="button" (click)="deleterooms(room)">DELETE</button>
+                </td>           
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Room Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Room Id</label>
+                            <input type="text" formControlName="roomId" placeholder="Enter your Room ID" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Room Charges</label>
+                            <input type="text" formControlName="roomCharges" placeholder="Enter room charges" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Room Type</label>
+                            <input type="text" formControlName="roomType" placeholder="Room Type" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Room Description</label>
+                            <input type="text" formControlName="roomDesc" placeholder="Room Description" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Room Available</label>
+                            <input type="text" formControlName="roomAvl" placeholder="Room Availability" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                   
+                  
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal"(click)="addroomto()">Add Details</button>
+                
+                  <button type="button" class="btn btn-primary" (click)="updateRooms()">Update Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
