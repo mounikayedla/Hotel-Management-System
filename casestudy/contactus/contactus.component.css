@@ -1,0 +1,54 @@
+
+      
+
+  h1{text-align: center;
+    font-style: oblique ;
+    font-size: 60px;margin: 10px; 
+    font-family: Tahoma,  sans-serif;
+    color: orangered;
+}
+ .contact-us{
+    /* background-color: bisque;  */
+    background-image: url("/assets/contact-us.png");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center;
+    /* height:100% */
+}
+  .abc{
+      text-align: center;
+      
+  }
+   .contact-col div p{ 
+    padding: 0;
+  /*  font-family: 'New Rocker', cursive;*/
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+  }
+  
+  .contact-col div h5{
+    margin-bottom: 5px;
+     color: #555;
+    font-weight: 400; 
+    font-size: 15px; 
+    font-family: 'New Rocker', cursive;
+    font-family: 'Arial', sans-serif;
+    font-family: 'Gruppo', cursive;
+    
+  }
+   .fa fa home{
+       text-align: center;
+       padding-right: 40px;
+   }
+  
+  .contact-col div h6{
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    font-size: 20px;
+    /*font-family: 'Times New Roman', Serif;*/
+     font-style: oblique;
+    font-family: 'Copperplate', Fantasy;
+    align-items: center;
+  }
+  
